@@ -1,0 +1,76 @@
+body {
+  background: red;
+}
+.inOutField {
+  display: flex;
+  align-items: center;
+}
+/* Стандартный стиль кнопки из Twitter Bootstrap */
+.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px}.btn:focus,.btn:active:focus,.btn.active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.btn:hover,.btn:focus{color:#333;text-decoration:none}.btn:active,.btn.active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.btn.disabled,.btn[disabled],fieldset[disabled] .btn{pointer-events:none;cursor:not-allowed;filter:alpha(opacity=65);-webkit-box-shadow:none;box-shadow:none;opacity:.65}
+
+/* стиль кнопки на основе кнопок из Twitter Bootstrap */
+.btn_conv {
+  display: block;
+  max-height: 40px;
+  color: #fff;
+  border-radius: 0em; /* Обнулить округлости */
+  -moz-border-radius: 0em; /* Обнулить округлости */
+  -webkit-border-radius: 0em; /* Обнулить округлости */
+  background: #265d94;
+  border: none;
+  text-shadow: -1px -1px 0px rgba(0,0,0,.2);
+  border-bottom: 2px solid #153a65;
+  position: relative;
+  margin: 0 auto; 
+}
+.btn_conv:after, .btn_conv:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+.btn_conv:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #265d94;
+	border-width: 16px;
+	margin-top: -16px;
+}
+.btn_conv:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-left-color: #153a65;
+	border-width: 16px;
+	margin-top: -14px;
+}
+.btn_conv:hover,
+.btn_conv:focus,
+.btn_conv:active,
+.btn_conv.active {
+  color: #fff;
+  outline: none;
+  background: #2e6eae;
+  border-bottom: 2px solid #1b4a80;
+}
+.btn_conv:hover:after,
+.btn_conv:focus:after,
+.btn_conv:active:after,
+.btn_conv.active:after {
+  border-left-color: #2e6eae;
+}
+.btn_conv:active,
+.btn_conv.active,
+.open .dropdown-toggle.btn_conv {
+  background: #265d94;
+  color: #fff;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.btn_conv:active:after,
+.btn_conv.active:after,
+.open .dropdown-toggle.btn_conv:after {
+  border-left-color: #265d94;
+}
+
