@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="{{ url_for('static', filename='style.css') }} " rel="stylesheet">
+    <link href="{{ url_for('static', filename='st.css') }} " rel="stylesheet">
 </head>
 <body>
     <h1>Number convertor</h1>
@@ -16,7 +16,7 @@
     <form class="inOutField" action="{{ url_for('index') }}" method = 'POST'>
         {{ csrf_token }}
         <textarea name="inText" id="1" cols="30" rows="10" resize = none></textarea>
-        <input type="submit" value="Convert">
+        <input class = " btn btn_con" type="submit" value="Convert">
         <textarea name="outText" disabled=disabled id="2" cols="30" rows="10">{{ result }}    
             </textarea>
     
