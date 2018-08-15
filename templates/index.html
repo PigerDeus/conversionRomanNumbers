@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="{{ url_for('static', filename='st.css') }} " rel="stylesheet">
+    <link href="{{ url_for('static', filename='s10.css') }} " rel="stylesheet">
 </head>
 <body>
     <h1>Number convertor</h1>
-    <div>
-        Input roman number to conver in arabic number. Max value for number 3999
-    </div>
+    <p>
+        Input roman number to conver in arabic number or input arabic number to convert to roman number.
+         Min value for number 1, max value 3999. 
+    </p>
     
     <form class="inOutField" action="{{ url_for('index') }}" method = 'POST'>
         {{ csrf_token }}
-        <textarea name="inText" id="1" cols="30" rows="10" resize = none></textarea>
-        <input class = " btn btn_con" type="submit" value="Convert">
-        <textarea name="outText" disabled=disabled id="2" cols="30" rows="10">{{ result }}    
-            </textarea>
+        <textarea name="inText" id="1" cols="30" rows="10">{{ result.in }}</textarea>
     
-    </form>
+        <input class = " btn btn_con" type="submit" value="Convert">
 
+        <textarea name="outText" disabled=disabled id="2" cols="30" rows="10">{{ result.res }}    
+            </textarea>
+    </form>
+    <h3>Last 10 convert_numbers</h3>
+    <ol>
+        {% for i in result.history %}
+        <li>{{ i.roman_value }} <=> {{ i.arabic_value}}</li>
+        {% endfor %}
+    </ol>
 </body>
 </html>

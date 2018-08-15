@@ -1,0 +1,37 @@
+h1 {
+  color: #3c3b39;
+}
+p {
+  color: #0a0a089e;
+}
+.inOutField {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body {
+  background: #e1e2e1;
+  color: #000
+}
+
+.inOutField textarea {
+  width: 40%;
+  resize: none;
+  background: #f5f5f6;
+  outline: none;
+}
+.btn {
+  outline: none;
+  background: #2195f2;
+  margin: 0;
+  padding: 15px;
+  color: #fff;
+  border: 0;
+  position: relative;
+}
+h3 {
+  opacity: 0.7;
+}
+li {
+  opacity: 0.6;
+}
